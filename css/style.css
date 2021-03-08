@@ -60,7 +60,7 @@ ul {
     grid-row: 1 / 2;
     display: grid;
 	grid-template: 1fr 1px / 1fr;
-	height: 100px;
+	height: 85px;
 	transition: all 1s linear 0s;
 }
 

@@ -1,5 +1,4 @@
 let heightWindow = window.innerHeight
-// document.querySelector('header').style.backgroundSize = `100% ${heightWindow}px`
 
 document.onkeydown = event => {
     if (event.key == 'r') {
@@ -17,6 +16,18 @@ setTimeout(() => {
 setTimeout(() => {
     document.querySelector('.header__head').style.height = '50px'
 }, 3700)
+
+let scroll = false
+
+document.onscroll = () => {
+    if (scroll !== true) {
+        return false
+    }
+}
+
+setTimeout(() => {
+    scroll = true
+}, 3000)
 
 // function bodyLocker() {
 //     document.querySelector('body').style.overflow = 'hidden'
