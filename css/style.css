@@ -132,6 +132,10 @@ ul {
 	grid-template: minmax(750px, auto) 1fr / 1fr;
 }
 
+.slider {
+	
+}
+
 .important {
 	grid-row: 1 / 2;
 	display: grid;

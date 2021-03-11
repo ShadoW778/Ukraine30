@@ -1,4 +1,5 @@
 let heightWindow = window.innerHeight
+document.querySelector('.header').style.height = heightWindow + 'px'
 
 document.onkeydown = event => {
     if (event.key == 'r') {
@@ -7,6 +8,7 @@ document.onkeydown = event => {
 }
 
 setTimeout(() => {
+    document.querySelector('.header__rest', '.header__flag').style.opacity = '0.6'
     document.querySelector('.header__y').style.backgroundColor = 'yellow'
     document.querySelector('.header__y').style.visibility = 'visible'
     document.querySelector('.header__b').style.backgroundColor = 'blue'
