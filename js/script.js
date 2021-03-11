@@ -1,5 +1,13 @@
 let heightWindow = window.innerHeight
+let widthWindow = window.innerWidth
+
 document.querySelector('.header').style.height = heightWindow + 'px'
+
+// let els = document.getElementsByClassName('slider-item')
+
+// for (let n = 0; n < els.length; n++) {
+//     els[n].style.width = (widthWindow / 3) + 'px'   
+// }
 
 document.onkeydown = event => {
     if (event.key == 'r') {
@@ -19,17 +27,6 @@ setTimeout(() => {
     document.querySelector('.header__head').style.height = '50px'
 }, 3700)
 
-let scroll = false
-
-document.onscroll = () => {
-    if (scroll !== true) {
-        return false
-    }
-}
-
-setTimeout(() => {
-    scroll = true
-}, 3000)
 
 // function bodyLocker() {
 //     document.querySelector('body').style.overflow = 'hidden'

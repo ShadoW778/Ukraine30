@@ -129,15 +129,27 @@ ul {
 .main {
     grid-area: main;
 	display: grid;
-	grid-template: minmax(750px, auto) 1fr / 1fr;
+	grid-template: minmax(200px, auto) minmax(750px, auto) 1fr / 1fr;
 }
 
 .slider {
-	
+	grid-row: 1 / 2;
+	border: 1px solid #000000;
+	position: relative;
+}
+
+.slider-in {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template: 1fr / repeat(minmax(33.333%));
+	max-height: 200px;
+}
+.slider-item {
+	border: 1px solid #000000;
 }
 
 .important {
-	grid-row: 1 / 2;
+	grid-row: 2 / 3;
 	display: grid;
 	grid-template: 1fr / 60% 40%;
 }
