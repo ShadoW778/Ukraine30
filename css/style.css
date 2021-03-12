@@ -59,7 +59,7 @@ ul {
 .header__head {
     grid-row: 1 / 2;
     display: grid;
-	grid-template: 1fr 1px / 1fr;
+	grid-template: 1fr 1.5px / 1fr;
 	height: 85px;
 	transition: all 1s linear 0s;
 }
@@ -70,13 +70,12 @@ ul {
 }
 
 .header__y {
-	grid-column: 1 / 2;
-	transition: all 1s ease 0s;
+	transition: all 1s linear 0s;
 	visibility: hidden;
 }
 
 .header__b {
-	transition: all 1s ease 0s;
+	transition: all 1s linear 0s;
 	visibility: hidden;
 }
  
@@ -84,6 +83,7 @@ ul {
 	grid-row: 2 / 3;
 	display: grid;
 	grid-template: 1fr / 50% 50%;
+	transition: all 1s linear 0s;
 }
 
 .header__yellow {
@@ -92,6 +92,7 @@ ul {
 	animation: fadeInLeft;
 	animation-delay: 0s;
 	animation-duration: 2500ms;
+	transition: all 0.5s linear 0s;
 }
 
 .header__blue {
@@ -100,6 +101,7 @@ ul {
 	animation: fadeInRight;
 	animation-delay: 0s;
 	animation-duration: 2500ms;
+	transition: all 1s linear 0s;
 }
 
 .header__body {
@@ -136,14 +138,16 @@ ul {
 	grid-row: 1 / 2;
 	border: 1px solid #000000;
 	position: relative;
+	overflow: hidden;
 }
 
 .slider-in {
-	display: grid;
-	grid-auto-flow: column;
-	grid-template: 1fr / repeat(minmax(33.333%));
-	max-height: 200px;
+	display: flex;
+	height: 200px;
+	position: relative;
+	background-color: aliceblue;
 }
+
 .slider-item {
 	border: 1px solid #000000;
 }

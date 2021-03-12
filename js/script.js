@@ -3,11 +3,24 @@ let widthWindow = window.innerWidth
 
 document.querySelector('.header').style.height = heightWindow + 'px'
 
-// let els = document.getElementsByClassName('slider-item')
+let els = document.getElementsByClassName('slider-item')
+let sliderIn = document.querySelector('.slider-in')
+let width
 
-// for (let n = 0; n < els.length; n++) {
-//     els[n].style.width = (widthWindow / 3) + 'px'   
-// }
+function init() {
+    console.log('Вычисление...')
+    width = document.querySelector('.slider').offsetWidth
+    sliderIn.style.width = width * els.length + 'px'
+    for (let n = 0; n < els.length; n++) {
+        els[n].style.width = (width / 3) + 'px'
+        els[n].style.height = 'auto'
+    }
+    console.log(width)
+}
+
+init()
+
+window.addEventListener('resize', init)
 
 document.onkeydown = event => {
     if (event.key == 'r') {
@@ -16,25 +29,16 @@ document.onkeydown = event => {
 }
 
 setTimeout(() => {
-    document.querySelector('.header__rest', '.header__flag').style.opacity = '0.6'
-    document.querySelector('.header__y').style.backgroundColor = 'yellow'
+    document.querySelector('.header__y').style.opacity = '0.6'
+    document.querySelector('.header__b').style.opacity = '0.6'
+    document.querySelector('.header__yellow').style.opacity = '0.6'
+    document.querySelector('.header__blue').style.opacity = '0.6'
     document.querySelector('.header__y').style.visibility = 'visible'
-    document.querySelector('.header__b').style.backgroundColor = 'blue'
     document.querySelector('.header__b').style.visibility = 'visible'
+    document.querySelector('.header__b').style.backgroundColor = 'blue'
+    document.querySelector('.header__y').style.backgroundColor = 'yellow'
 }, 2500)
 
 setTimeout(() => {
     document.querySelector('.header__head').style.height = '50px'
 }, 3700)
-
-
-// function bodyLocker() {
-//     document.querySelector('body').style.overflow = 'hidden'
-//     setTimeout(bodyUnlocker, 2500)
-// }
-
-// bodyLocker()
-
-// function bodyUnlocker() {
-//     document.querySelector('body').style.overflow = 'visible'
-// }
