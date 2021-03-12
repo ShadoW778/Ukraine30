@@ -1,33 +1,46 @@
 let heightWindow = window.innerHeight
 let widthWindow = window.innerWidth
 
-document.querySelector('.header').style.height = heightWindow + 'px'
-
-let els = document.getElementsByClassName('slider-item')
-let sliderIn = document.querySelector('.slider-in')
-let width
-
-function init() {
-    console.log('Вычисление...')
-    width = document.querySelector('.slider').offsetWidth
-    sliderIn.style.width = width * els.length + 'px'
-    for (let n = 0; n < els.length; n++) {
-        els[n].style.width = (width / 3) + 'px'
-        els[n].style.height = 'auto'
-    }
-    console.log(width)
-}
-
-init()
-
-window.addEventListener('resize', init)
-
 document.onkeydown = event => {
     if (event.key == 'r') {
         location.reload()
     }
 }
 
+// Changing header's height
+document.querySelector('.header').style.height = heightWindow + 'px'
+
+// Slider
+let els = document.getElementsByClassName('slider-item')
+let sliderIn = document.querySelector('.slider-in')
+let widthN
+let move = 0
+
+init()
+autoSlider()
+
+function init() {
+    console.log('Вычисление...')
+    widthN = document.querySelector('.slider').offsetWidth
+    sliderIn.style.width = widthN * els.length + 'px'
+    for (let n = 0; n < els.length; n++) {
+        els[n].style.width = (widthN / 3) + 'px'
+        els[n].style.height = 'auto'
+    }
+}
+
+window.addEventListener('resize', init)
+
+function autoSlider() {
+    move += widthN / 3
+    if (move > (widthN / 3) * (els.length - 2)) {
+        move = 0
+    }
+    sliderIn.style.right = move + 'px'
+    setTimeout(autoSlider, 3000)
+}
+
+// Changing properties
 setTimeout(() => {
     document.querySelector('.header__y').style.opacity = '0.6'
     document.querySelector('.header__b').style.opacity = '0.6'
