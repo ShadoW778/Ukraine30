@@ -17,7 +17,7 @@ let widthN
 let move = 0
 
 init()
-autoSlider()
+setTimeout(autoSlider, 4000)
 
 function init() {
     console.log('Вычисление...')
@@ -37,7 +37,12 @@ function autoSlider() {
         move = 0
     }
     sliderIn.style.right = move + 'px'
-    setTimeout(autoSlider, 3000)
+    if (move == (widthN / 3) * (els.length - 2)) {
+        setTimeout(autoSlider, 6500)
+    }
+    else {
+        setTimeout(autoSlider, 4000)
+    }
 }
 
 // Changing properties
@@ -53,5 +58,10 @@ setTimeout(() => {
 }, 2500)
 
 setTimeout(() => {
-    document.querySelector('.header__head').style.height = '50px'
+    if (widthWindow < 700) {
+        document.querySelector('.header__head').style.height = '36px'
+    }
+    else {
+        document.querySelector('.header__head').style.height = '50px'
+    }
 }, 3700)
