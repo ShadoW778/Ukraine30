@@ -33,11 +33,11 @@ window.addEventListener('resize', init)
 
 function autoSlider() {
     move += widthN / 3
-    if (move > (widthN / 3) * (els.length - 2)) {
+    if (move > (widthN / 3) * (els.length - 3)) {
         move = 0
     }
     sliderIn.style.right = move + 'px'
-    if (move == (widthN / 3) * (els.length - 2)) {
+    if (move == (widthN / 3) * (els.length - 3)) {
         setTimeout(autoSlider, 6500)
     }
     else {
