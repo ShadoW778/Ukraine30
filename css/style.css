@@ -193,15 +193,27 @@ ul {
 }
 
 .act__content {
-	display: flex;
+	display: grid;
+	grid-template: minmax(auto, 80px) 1fr / 1fr;
 }
 
-.act__photo {
-	max-height: 360px;
+.act__group {
+	grid-row: 2 / 3;
+	display: grid;
+	grid-template: 1fr / 2fr 1fr;
+}
+
+.act__text {
+	grid-column: 1 / 2;
+}
+
+.act__photo {	
+	grid-column: 2 / 3;
 }
 
 .act__photo img {
-	max-width: 600px;
+	display: block;
+	max-width: 300px;
 	object-fit: cover;
 }
 

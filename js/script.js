@@ -20,7 +20,6 @@ init()
 setTimeout(autoSlider, 4000)
 
 function init() {
-    console.log('Вычисление...')
     widthN = document.querySelector('.slider').offsetWidth
     sliderIn.style.width = widthN * els.length + 'px'
     for (let n = 0; n < els.length; n++) {
