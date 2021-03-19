@@ -137,7 +137,7 @@ ul {
 .main {
     grid-area: main;
 	display: grid;
-	grid-template: minmax(200px, auto) minmax(550px, auto) minmax(750px, auto) 1fr / 1fr;
+	grid-template: minmax(200px, auto) minmax(auto, 100px) minmax(550px, auto) minmax(750px, auto) 1fr / 1fr;
 }
 
 .slider {
@@ -185,8 +185,23 @@ ul {
 	}
 }
 
+.line {
+	display: flex;
+	margin: 20px 0;
+}
+
+.line__y {
+	background-color: yellow;
+	width: 50%;
+}
+
+.line__b {
+	background-color: blue;
+	width: 50%;
+}
+
 .act {
-	grid-row: 2 / 3;
+	grid-row: 3 / 4;
 	display: grid;
 	padding: 50px;
 }
@@ -252,7 +267,7 @@ ul {
 }
 
 .important {
-	grid-row: 3 / 4;
+	grid-row: 4 / 5;
 	display: grid;
 	grid-template: 1fr / 60% 40%;
 }

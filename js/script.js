@@ -64,3 +64,9 @@ setTimeout(() => {
         document.querySelector('.header__head').style.height = '50px'
     }
 }, 3700)
+
+setTimeout(function() {
+    document.onscroll = event => {
+        console.log(Math.floor(window.pageYOffset))
+    }
+}, 4000)

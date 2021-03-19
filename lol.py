@@ -10,4 +10,4 @@ def IMT(weight, height):
     back = 'Ваш индекс - {0}. Это {1} результат.'.format(res, stan)
     return back
 
-print(IMT(40, 1.6))
+print(IMT(50, 1.6))
