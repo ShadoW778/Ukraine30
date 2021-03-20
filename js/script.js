@@ -65,8 +65,8 @@ setTimeout(() => {
     }
 }, 3700)
 
-setTimeout(function() {
-    document.onscroll = event => {
-        console.log(Math.floor(window.pageYOffset))
+document.onscroll = () => {
+    if (Math.floor(window.pageYOffset) < 450) {
+        document.querySelector('.header__h1').style.opacity = 1 - (Math.floor(window.pageYOffset) / 350)
     }
-}, 4000)
+}
