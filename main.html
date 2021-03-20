@@ -29,8 +29,8 @@
                     <div class="header__b"></div>
                 </div>
                 <div class="header__flag">
-                    <div class="header__yellow"></div>
-                    <div class="header__blue"></div>
+                    <div class="header__yellow wow fadeInLeftBig" data-wow-duration="2.5s"></div>
+                    <div class="header__blue wow fadeInRightBig" data-wow-duration="2.5s"></div>
                 </div>
             </div>
             <div class="header__body">
@@ -72,8 +72,8 @@
                 </div>
             </div>
             <div class="line">
-                <div class="line__y"></div>
-                <div class="line__b"></div>
+                <div class="line__y wow fadeInLeftBig" data-wow-duration="2s" data-wow-delay="0.2s"></div>
+                <div class="line__b wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="0.2s"></div>
             </div>
             <div class="act">
                 <div class="act__content">
@@ -108,7 +108,11 @@
 
         </footer>
     </div>
-    <script src="js/script.js" defer></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 

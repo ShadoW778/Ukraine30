@@ -95,18 +95,12 @@ ul {
 .header__yellow {
 	grid-column: 1 / 2;
 	background-color: yellow;
-	animation: fadeInLeft;
-	animation-delay: 0s;
-	animation-duration: 2500ms;
 	transition: all 0.5s linear 0s;
 }
 
 .header__blue {
 	grid-column: 2 / 3;
 	background-color: blue;
-	animation: fadeInRight;
-	animation-delay: 0s;
-	animation-duration: 2500ms;
 	transition: all 1s linear 0s;
 }
 
@@ -188,6 +182,8 @@ ul {
 .line {
 	display: flex;
 	margin: 20px 0;
+	overflow: hidden;
+	opacity: 0.8;
 }
 
 .line__y {
