@@ -152,11 +152,10 @@ ul {
 .main {
     grid-area: main;
 	display: grid;
-	grid-template: minmax(200px, auto) minmax(auto, 100px) minmax(550px, auto) minmax(750px, auto) 1fr / 1fr;
+	grid-template: minmax(200px, auto) minmax(1000px, auto) minmax(auto, 100px) minmax(550px, auto) minmax(750px, auto) 1fr / 1fr;
 }
 
 .slider {
-	grid-row: 1 / 2;
 	border: 1px solid #000000;
 	position: relative;
 	overflow: hidden;
@@ -200,6 +199,25 @@ ul {
 	}
 }
 
+.gallery {
+	padding: 15px;
+}
+
+.gallery__items {
+	display: grid;
+	grid-template-rows: repeat(auto-fit, minmax(auto, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+}
+
+.gallery__item {
+
+}
+
+.n1 {
+	background-image: url(../img/UkrainaEvropa.png);
+	background-position: center center;
+}
+
 .line {
 	display: flex;
 	margin: 20px 0;
@@ -218,7 +236,6 @@ ul {
 }
 
 .act {
-	grid-row: 3 / 4;
 	display: grid;
 	padding: 50px;
 	padding-top: 0;
@@ -311,7 +328,6 @@ ul {
 }
  
 .important {
-	grid-row: 4 / 5;
 	display: grid;
 	grid-template: 1fr / 60% 40%;
 }
