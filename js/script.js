@@ -22,25 +22,48 @@ setTimeout(autoSlider, 4000)
 function init() {
     widthN = document.querySelector('.slider').offsetWidth
     sliderIn.style.width = widthN * els.length + 'px'
-    for (let n = 0; n < els.length; n++) {
-        els[n].style.width = (widthN / 3) + 'px'
-        els[n].style.height = 'auto'
+    if (widthN <= 580) {
+        for (let n = 0; n < els.length; n++) {
+            els[n].style.width = (widthN / 2) + 'px'
+            els[n].style.height = 'auto'
+        }
+    }
+    else {
+        for (let n = 0; n < els.length; n++) {
+            els[n].style.width = (widthN / 3) + 'px'
+            els[n].style.height = 'auto'
+        }
     }
 }
 
 window.addEventListener('resize', init)
 
 function autoSlider() {
-    move += widthN / 3
-    if (move > (widthN / 3) * (els.length - 3)) {
-        move = 0
-    }
-    sliderIn.style.right = move + 'px'
-    if (move == (widthN / 3) * (els.length - 3)) {
-        setTimeout(autoSlider, 6500)
+    if (widthN <= 580) {
+            move += widthN / 2
+        if (move > (widthN / 2) * (els.length - 2)) {
+            move = 0
+        }
+        sliderIn.style.right = move + 'px'
+        if (move == (widthN / 2) * (els.length - 2)) {
+            setTimeout(autoSlider, 6500)
+        }
+        else {
+            setTimeout(autoSlider, 4000)
+        }
     }
     else {
-        setTimeout(autoSlider, 4000)
+        move += widthN / 3
+        if (move > (widthN / 3) * (els.length - 3)) {
+            move = 0
+        }
+        sliderIn.style.right = move + 'px'
+        if (move == (widthN / 3) * (els.length - 3)) {
+            setTimeout(autoSlider, 6500)
+        }
+        else {
+            setTimeout(autoSlider, 4000)
+        }
     }
 }
 

@@ -1,3 +1,27 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.eot');
+	src: local('☺'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Merriweather';
+	src: url('../fonts/Merriweather-Black.eot');
+	src: local('☺'), url('../fonts/Merriweather-Black.woff') format('woff'), url('../fonts/Merriweather-Black.ttf') format('truetype'), url('../fonts/Merriweather-Black.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular.eot');
+	src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/OpenSans-Regular.woff') format('woff'),
+	url('../fonts/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*Обнуление*/
 *,
 *:before,
@@ -116,9 +140,6 @@ ul {
 	color: #FFFAFA;
 	font-weight: 600;
 	margin-bottom: 100px;
-	animation: fadeInUpBig;
-	animation-delay: 0s;
-	animation-duration: 3000ms;
 	text-align: center;
 }
 
@@ -201,11 +222,12 @@ ul {
 	display: grid;
 	padding: 50px;
 	padding-top: 0;
+	border-bottom: 1px solid #000000;
 }
 
 .act__content {
 	display: grid;
-	grid-template: minmax(auto, 100px) 1fr minmax(auto, 200px) / 1fr;
+	grid-template: minmax(auto, 100px) 1fr minmax(auto, 300px) / 1fr;
 }
 
 .act__title {
@@ -231,9 +253,16 @@ ul {
 
 .act__photo img {
 	display: block;
-	max-width: 800px;
-	max-height: 300px;
+	max-width: 600px;
+	max-height: 400px;
 	object-fit: cover;
+}
+
+@media (max-width: 750px) {
+	.act__photo img {
+		max-width: 427px;
+		max-height: 250px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -245,9 +274,18 @@ ul {
 	}
 }
 
+@media (max-width: 550px) {
+	.act__title {
+		font-size: 17.5px;
+	}
+}
+
 @media (max-width: 515px) {
 	.act {
-		padding: 18px;
+		padding: 15px;
+	}
+	.act__content {
+		grid-template: minmax(auto, 120px) 1fr minmax(auto, 300px) / 1fr;
 	}
 	.act__title {
 		font-size: 17px;
@@ -261,9 +299,17 @@ ul {
 	}
 	.act__photo img {
 		max-width: 350px;
+		max-height: 200px;
 	}
 }
 
+@media (max-width: 400px) {
+	.act__photo img {
+		max-width: 300px;
+		max-height: 170px;
+	}
+}
+ 
 .important {
 	grid-row: 4 / 5;
 	display: grid;
