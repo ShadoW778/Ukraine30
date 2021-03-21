@@ -205,16 +205,62 @@ ul {
 
 .gallery__items {
 	display: grid;
+	justify-items: center;
 	grid-template-rows: repeat(auto-fit, minmax(auto, 300px));
     grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+	column-gap: 30px;
+	row-gap: 25px;
 }
 
 .gallery__item {
-
+	display: flex;
+	width: 320px;
+	height: 300px;
+	border-radius: 20px;
 }
 
 .n1 {
 	background-image: url(../img/UkrainaEvropa.png);
+	background-position: center center;
+}
+
+.n2 {
+	background-image: url(../img/konstitutsiya.jpg);
+	background-position: center center;
+}
+
+.n3 {
+	background-image: url(../img/khreschtik.jpg);
+	background-position: center center;
+}
+
+.n4 {
+	background-image: url(../img/metro.jpg);
+	background-position: center center;
+}
+
+.n5 {
+	background-image: url(../img/taras.jpg);
+	background-position: center center;
+}
+
+.n6 {
+	background-image: url(../img/schedrik.jpg);
+	background-position: center center;
+}
+
+.n7 {
+	background-image: url(../img/samolet.jpg);
+	background-position: center center;
+}
+
+.n8 {
+	background-image: url(../img/pechera.jpg);
+	background-position: center center;
+}
+
+.n9 {
+	background-image: url(../img/akademia.jpg);
 	background-position: center center;
 }
 
