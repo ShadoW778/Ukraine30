@@ -200,68 +200,104 @@ ul {
 }
 
 .gallery {
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1000px) 1fr;
 	padding: 15px;
 }
 
 .gallery__items {
+	grid-column: 2 / 3;
 	display: grid;
-	justify-items: center;
+	justify-content: center;
 	grid-template-rows: repeat(auto-fit, minmax(auto, 300px));
     grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
-	column-gap: 30px;
+	column-gap: 20px;
 	row-gap: 25px;
 }
 
 .gallery__item {
 	display: flex;
-	width: 320px;
 	height: 300px;
+	width: 100%;
 	border-radius: 20px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
 }
 
-.n1 {
-	background-image: url(../img/UkrainaEvropa.png);
-	background-position: center center;
+.gallery__item img {
+	-moz-transition: all 1s ease;
+ 	-o-transition: all 1s ease;
+ 	-webkit-transition: all 1s ease;
+	position: absolute;
 }
 
-.n2 {
-	background-image: url(../img/konstitutsiya.jpg);
-	background-position: center center;
+.gallery__item img:hover {
+	-webkit-transform: scale(1.15);
+ 	-moz-transform: scale(1.15);
+ 	-o-transform: scale(1.15);
 }
 
-.n3 {
-	background-image: url(../img/khreschtik.jpg);
-	background-position: center center;
+.n1 img {
+	left: -52px;
 }
 
-.n4 {
-	background-image: url(../img/metro.jpg);
-	background-position: center center;
+.n2 img {
+	left: -130px;
 }
 
-.n5 {
-	background-image: url(../img/taras.jpg);
-	background-position: center center;
+.n3 img {
+	left: -100px;
 }
 
-.n6 {
-	background-image: url(../img/schedrik.jpg);
-	background-position: center center;
+.n4 img {
+	left: -40px;
 }
 
-.n7 {
-	background-image: url(../img/samolet.jpg);
-	background-position: center center;
+.n5 img {
+	left: -40px;
 }
 
-.n8 {
-	background-image: url(../img/pechera.jpg);
-	background-position: center center;
+.n6 img {
+	left: -40px;
 }
 
-.n9 {
-	background-image: url(../img/akademia.jpg);
-	background-position: center center;
+.n7 img {
+	left: -80px;
+}
+
+.n8 img {
+	left: -80px;
+}
+
+.n9 img {
+	left: -30px;
+}
+
+@media (max-width: 1046px) {
+	.gallery__items {
+		column-gap: 100px;
+	}
+}
+
+@media (max-width: 800px) {
+	.gallery__items {
+		column-gap: 30px;
+	}
+	.gallery__item {
+		min-width: 260px;
+		max-width: 320px;
+	}
+}
+
+@media (max-width: 716px) {
+	.gallery__items {
+		grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
+	}
+	.gallery__item {
+		min-width: 260px;
+		max-width: 400px;
+	}
 }
 
 .line {
